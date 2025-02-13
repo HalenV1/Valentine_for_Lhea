@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Lhea ❤️</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #6a0dad;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+        .container {
+            margin-top: 50px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        .btn {
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: #ff66c4;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0px 0px 15px rgba(255, 102, 196, 0.7);
+        }
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 25px rgba(255, 102, 196, 1);
+        }
+        .hidden {
+            display: none;
+        }
+        .chocolates img {
+            width: 120px;
+            margin: 10px;
+            animation: float 2s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .heart-gif {
+            width: 200px;
+            margin-top: 20px;
+            border-radius: 2rem;
+        }
+        .message-box {
+            background: rgba(112, 61, 130, 1);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+            display: inline-block;
+            margin-top: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lhea, this is for you ❤️</h1>
+        <button class="btn" onclick="showMessage()">Click to open 🎁</button>
+        <div id="message" class="hidden">
+            <div class="message-box">
+                <h2>Yes! Happy Valentine's, Lhea! 🍫❤️</h2>
+                <img class="heart-gif" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWM5azI2MG83amY4aTFsYmcxdzh4dGJjbWd0NDZwbnl3aTZrZWMyZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XYm7qC0WfvhGB3B1HN/giphy.gif" alt="Floating Hearts">
+                <div class="chocolates">
+                    <img src="../Image/choco.png" alt="Chocolate 1">
+                    <img src="../Image/choco.png" alt="Chocolate 2">
+                    <img src="../Image/choco.png" alt="Chocolate 3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showMessage() {
+            document.querySelector('.btn').style.display = 'none';
+            document.getElementById('message').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
